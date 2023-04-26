@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvToDoItems"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/etToDoTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/etToDoTitle"
+            android:layout_width="312dp"
+            android:layout_height="67.48dp"
+            android:layout_marginBottom="28dp"
+            android:hint="Enter ToDo Title"
+            android:textColor="@color/black"
+            android:textSize="20.45dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnAddToDO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnAddToDO"
+            android:layout_width="312dp"
+            android:layout_height="67.48dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/add_button"
+            android:text="Add TODO"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="28.63dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnDeleteToDos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnDeleteToDos"
+            android:layout_width="312dp"
+            android:layout_height="67.48dp"
+            android:layout_marginBottom="92dp"
+            android:background="@drawable/delete_button"
+            android:text="Delete TODO"
+            android:textAllCaps="false"
+            android:textSize="28.63dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
